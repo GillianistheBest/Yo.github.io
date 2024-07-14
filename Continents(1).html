@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        background-color: black;
+        width: 120px;
+        height: 30px;
+        border: solid white 1px;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+<head>
+
+</head>
+
+<body>
+
+    <input type = "text" placeholder=" TYPE HERE" id = "input" onkeyup="search ()" >
+
+  <ul id ="list">
+    <li>
+      <a href = "https://en.wikipedia.org/wiki/Barney_%26_Friends">Asia</a>
+    </li>
+
+    <li>
+      <a href = "https://www.poetryfoundation.org/poems/46951/humpty-dumpty-sat-on-a-wall">Africia</a>
+    </li>
+    <li>
+      <a href = "https://en.wikipedia.org/wiki/Donald_Trump">North America</a>
+    </li>
+    <li>
+      <a href = "https://www.google.com/search?gs_ssp=eJzj4tDP1TewMLQ0NmD04i8oSi3OTEnNK1EoKC3JzAMAZ-UIiw&q=president+putin&rlz=1C5CHFA_enCA1021CA1021&oq=presi&gs_lcrp=EgZjaHJvbWUqEAgFEC4YgwEYsQMYgAQYigUyBggAEEUYOTISCAEQLhgUGIMBGIcCGLEDGIAEMg0IAhAAGIMBGLEDGIAEMg0IAxAAGIMBGLEDGIAEMg0IBBAuGIMBGLEDGIAEMhAIBRAuGIMBGLEDGIAEGIoFMhAIBhAAGIMBGLEDGIAEGIoFMg0IBxAAGIMBGLEDGIAEMgcICBAAGIAEMgcICRAAGI8C0gEINjU5MmowajmoAgCwAgA&sourceid=chrome&ie=UTF-8">South Americia</a>
+    </li>
+    <li>
+      <a href = "https://www.google.com/search?gs_ssp=eJzj4tTP1TcwSjLNyjBg9OLLKi0uycxTKCkqTUlNLAUAcKsI6g&q=justin+trudeau&rlz=1C5CHFA_enCA1021CA1021&oq=Justin+&gs_lcrp=EgZjaHJvbWUqDQgBEC4YgwEYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyDQgBEC4YgwEYsQMYgAQyCggCEC4YsQMYgAQyDQgDEC4YgwEYsQMYgAQyBggEEEUYOTINCAUQLhiDARixAxiABDIKCAYQLhixAxiABDIGCAcQRRg90gEIMzUyNWowajmoAgCwAgE&sourceid=chrome&ie=UTF-8">Antartica</a>
+    </li>
+    <li>
+      <a href = "https://www.google.com/search?q=justin+Beiber&rlz=1C5CHFA_enCA1021CA1021&oq=justin+Beiber&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIMCAEQLhgKGLEDGIAEMgwIAhAAGAoYsQMYgAQyCQgDEAAYChiABDIMCAQQABgKGLEDGIAEMgwIBRAAGAoYsQMYgAQyCAgGEAAYAxgKMgkIBxAAGAoYgAQyDAgIEAAYChixAxiABNIBCDM3ODdqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8">Europe</a>
+    </li>
+    <li>
+      <a href = "https://www.google.com/search?q=drake&rlz=1C5CHFA_enCA1021CA1021&oq=Drake+&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyBggBEEUYOTIKCAIQABixAxiABDIHCAMQLhiABDIKCAQQABixAxiABDIKCAUQABixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDIHCAgQABiABDIKCAkQABixAxiABNIBCDU3MTVqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8#vhid=SCxonkXfsxzXcM&vssid=l">Australia</a>
+    </li>
+  </ul>
+<script>
+  function search () {
+    var input = document.getElementById ("input").value;
+    var list =  document.getElementById ("list");
+    var items = list.getElementsByTagName ("li");
+    for (var i=0;i<items.length; i++) {
+      var current_item = items [i].textContent;
+      if (current_item.toLowerCase  ().includes (input.toLowerCase ())) {
+        items [i].style.display= "block"; 
+      }
+      else {
+        items [i].style.display ="none";
+      }
+    }
+  }
+</script>
+
+</body>
+
+</html>
